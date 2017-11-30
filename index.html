@@ -1,410 +1,556 @@
-<!doctype html>
-<html lang="en">
-
-	<head>
-		<meta charset="utf-8">
-
-		<title>reveal.js – The HTML Presentation Framework</title>
-
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
-
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-		<link rel="stylesheet" href="reveal.css">
-		<link rel="stylesheet" href="black.css" id="theme">
-
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="zenburn.css">
-
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
-
-	<body>
-
-		<div class="reveal">
-
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-				<section>
-					<h1>Reveal.js</h1>
-					<h3>The HTML Presentation Framework</h3>
-					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> and <a href="https://github.com/hakimel/reveal.js/graphs/contributors">contributors</a></small>
-					</p>
-				</section>
-
-				<section>
-					<h2>Hello There</h2>
-					<p>
-						reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
-					</p>
-				</section>
-
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>Slides can be nested inside of each other.</p>
-						<p>Use the <em>Space</em> key to navigate through all slides.</p>
-						<br>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>That's it, time to go back up.</p>
-						<br>
-						<a href="#/2">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-				</section>
-
-				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="https://slides.com" target="_blank">https://slides.com</a>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
-				</section>
-
-				<section>
-					<h2>Touch Optimized</h2>
-					<p>
-						Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
-					</p>
-				</section>
-
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
-
-						Write content using inline or external Markdown.
-						Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-
-						```
-						<section data-markdown>
-						  ## Markdown support
-
-						  Write content using inline or external Markdown.
-						  Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-					</script>
-				</section>
-
-				<section>
-					<section id="fragments">
-						<h2>Fragments</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
-
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's different types of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment fade-up">fade-up (also down, left and right!)</p>
-						<p class="fragment current-visible">current-visible</p>
-						<p>Highlight <span class="fragment highlight-red">red</span> <span class="fragment highlight-blue">blue</span> <span class="fragment highlight-green">green</span></p>
-					</section>
-				</section>
-
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=slide#/transitions">Slide</a> -
-						<a href="?transition=convex#/transitions">Convex</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a>
-					</p>
-				</section>
-
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						reveal.js comes with a few themes built in: <br>
-						<!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a> <br>
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return false;">Blood</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
-					</p>
-				</section>
-
-				<section>
-					<section data-background="#dddddd">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code class="hljs">&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Tiled Backgrounds</h2>
-						<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-					</section>
-					<section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
-						<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
-							<h2>Video Backgrounds</h2>
-							<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
-						</div>
-					</section>
-					<section data-background="http://i.giphy.com/90F8aUepslB84.gif">
-						<h2>... and GIFs!</h2>
-					</section>
-				</section>
-
-				<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						Different background transitions are available via the backgroundTransition option. This one's called "zoom".
-					</p>
-					<pre><code class="hljs">Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
-				</section>
-
-				<section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						You can override background transitions per-slide.
-					</p>
-					<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
-				</section>
-
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code class="hljs" data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
-}
-					</code></pre>
-					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-				</section>
-
-				<section>
-					<h2>Marvelous List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
-
-				<section>
-					<h2>Tabular Tables</h2>
-					<table>
-						<thead>
-							<tr>
-								<th>Item</th>
-								<th>Value</th>
-								<th>Quantity</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Apples</td>
-								<td>$1</td>
-								<td>7</td>
-							</tr>
-							<tr>
-								<td>Lemonade</td>
-								<td>$2</td>
-								<td>18</td>
-							</tr>
-							<tr>
-								<td>Bread</td>
-								<td>$3</td>
-								<td>2</td>
-							</tr>
-						</tbody>
-					</table>
-				</section>
-
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">The nice thing about standards is that there are so many to choose from</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
-				</section>
-
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Speaker View</h2>
-					<p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
-					<p>Press the <em>S</em> key to try it out.</p>
-
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
-				</section>
-
-				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's an example:</p>
-					<iframe data-src="https://www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
-				</section>
-
-				<section>
-					<h2>Global State</h2>
-					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the page background.
-					</p>
-				</section>
-
-				<section data-state="customevent">
-					<h2>State Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
-Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
-
-				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
-					</p>
-				</section>
-
-				<section>
-					<h2>Much more</h2>
-					<ul>
-						<li>Right-to-left support</li>
-						<li><a href="https://github.com/hakimel/reveal.js#api">Extensive JavaScript API</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#auto-sliding">Auto-progression</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#parallax-background">Parallax backgrounds</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#keyboard-bindings">Custom keyboard bindings</a></li>
-					</ul>
-				</section>
-
-				<section style="text-align: left;">
-					<h1>THE END</h1>
-					<p>
-						- <a href="https://slides.com">Try the online editor</a> <br>
-						- <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
-					</p>
-				</section>
-
-			</div>
-
-		</div>
-
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
-
-		<script>
-
-			// More info https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
-
-				transition: 'slide', // none/fade/slide/convex/concave/zoom
-
-				// More info https://github.com/hakimel/reveal.js#dependencies
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/search/search.js', async: true },
-					{ src: 'plugin/zoom-js/zoom.js', async: true },
-					{ src: 'plugin/notes/notes.js', async: true }
-				]
-			});
-
-		</script>
-
-	</body>
-</html>
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>https://revealjs.com/</title><link rel="stylesheet" type="text/css" href="https:_revealjs.com__files/viewsource.css"></head><body id="viewsource" class="highlight" style="-moz-tab-size: 4" contextmenu="actions"><pre id="line1"><span></span><span class="doctype">&lt;!doctype html&gt;</span><span>
+<span id="line2"></span></span><span>&lt;<span class="start-tag">html</span> <span class="attribute-name">lang</span>="<a class="attribute-value">en</a>"&gt;</span><span>
+<span id="line3"></span>
+<span id="line4"></span>	</span><span>&lt;<span class="start-tag">head</span>&gt;</span><span>
+<span id="line5"></span>		</span><span>&lt;<span class="start-tag">meta</span> <span class="attribute-name">charset</span>="<a class="attribute-value">utf-8</a>"&gt;</span><span>
+<span id="line6"></span>
+<span id="line7"></span>		</span><span>&lt;<span class="start-tag">title</span>&gt;</span><span>reveal.js – The HTML Presentation Framework</span><span>&lt;/<span class="end-tag">title</span>&gt;</span><span>
+<span id="line8"></span>
+<span id="line9"></span>		</span><span>&lt;<span class="start-tag">meta</span> <span class="attribute-name">name</span>="<a class="attribute-value">description</a>" <span class="attribute-name">content</span>="<a class="attribute-value">A framework for easily creating beautiful presentations using HTML</a>"&gt;</span><span>
+<span id="line10"></span>		</span><span>&lt;<span class="start-tag">meta</span> <span class="attribute-name">name</span>="<a class="attribute-value">author</a>" <span class="attribute-name">content</span>="<a class="attribute-value">Hakim El Hattab</a>"&gt;</span><span>
+<span id="line11"></span>
+<span id="line12"></span>		</span><span>&lt;<span class="start-tag">meta</span> <span class="attribute-name">name</span>="<a class="attribute-value">apple-mobile-web-app-capable</a>" <span class="attribute-name">content</span>="<a class="attribute-value">yes</a>"&gt;</span><span>
+<span id="line13"></span>		</span><span>&lt;<span class="start-tag">meta</span> <span class="attribute-name">name</span>="<a class="attribute-value">apple-mobile-web-app-status-bar-style</a>" <span class="attribute-name">content</span>="<a class="attribute-value">black-translucent</a>"&gt;</span><span>
+<span id="line14"></span>
+<span id="line15"></span>		</span><span>&lt;<span class="start-tag">meta</span> <span class="attribute-name">name</span>="<a class="attribute-value">viewport</a>" <span class="attribute-name">content</span>="<a class="attribute-value">width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no</a>"&gt;</span><span>
+<span id="line16"></span>
+<span id="line17"></span>		</span><span>&lt;<span class="start-tag">link</span> <span class="attribute-name">rel</span>="<a class="attribute-value">stylesheet</a>" <span class="attribute-name">href</span>="<a class="attribute-value" href="view-source:https://revealjs.com/css/reveal.css">css/reveal.css</a>"&gt;</span><span>
+<span id="line18"></span>		</span><span>&lt;<span class="start-tag">link</span> <span class="attribute-name">rel</span>="<a class="attribute-value">stylesheet</a>" <span class="attribute-name">href</span>="<a class="attribute-value" href="view-source:https://revealjs.com/css/theme/black.css">css/theme/black.css</a>" <span class="attribute-name">id</span>="<a class="attribute-value">theme</a>"&gt;</span><span>
+<span id="line19"></span>
+<span id="line20"></span>		</span><span class="comment">&lt;!-- Theme used for syntax highlighting of code --&gt;</span><span>
+<span id="line21"></span>		</span><span>&lt;<span class="start-tag">link</span> <span class="attribute-name">rel</span>="<a class="attribute-value">stylesheet</a>" <span class="attribute-name">href</span>="<a class="attribute-value" href="view-source:https://revealjs.com/lib/css/zenburn.css">lib/css/zenburn.css</a>"&gt;</span><span>
+<span id="line22"></span>
+<span id="line23"></span>		</span><span class="comment">&lt;!-- Printing and PDF exports --&gt;</span><span>
+<span id="line24"></span>		</span><span>&lt;<span class="start-tag">script</span>&gt;</span><span>
+<span id="line25"></span>			var link = document.createElement( 'link' );
+<span id="line26"></span>			link.rel = 'stylesheet';
+<span id="line27"></span>			link.type = 'text/css';
+<span id="line28"></span>			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+<span id="line29"></span>			document.getElementsByTagName( 'head' )[0].appendChild( link );
+<span id="line30"></span>		</span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>
+<span id="line31"></span>
+<span id="line32"></span>		</span><span class="comment">&lt;!--[if lt IE 9]&gt;
+<span id="line33"></span>		&lt;script src="lib/js/html5shiv.js"&gt;&lt;/script&gt;
+<span id="line34"></span>		&lt;![endif]--&gt;</span><span>
+<span id="line35"></span>	</span><span>&lt;/<span class="end-tag">head</span>&gt;</span><span>
+<span id="line36"></span>
+<span id="line37"></span>	</span><span>&lt;<span class="start-tag">body</span>&gt;</span><span>
+<span id="line38"></span>
+<span id="line39"></span>		</span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>="<a class="attribute-value">reveal</a>"&gt;</span><span>
+<span id="line40"></span>
+<span id="line41"></span>			</span><span class="comment">&lt;!-- Any section element inside of this container is displayed as a slide --&gt;</span><span>
+<span id="line42"></span>			</span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>="<a class="attribute-value">slides</a>"&gt;</span><span>
+<span id="line43"></span>				</span><span>&lt;<span class="start-tag">section</span>&gt;</span><span>
+<span id="line44"></span>					</span><span>&lt;<span class="start-tag">h1</span>&gt;</span><span>Reveal.js</span><span>&lt;/<span class="end-tag">h1</span>&gt;</span><span>
+<span id="line45"></span>					</span><span>&lt;<span class="start-tag">h3</span>&gt;</span><span>The HTML Presentation Framework</span><span>&lt;/<span class="end-tag">h3</span>&gt;</span><span>
+<span id="line46"></span>					</span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>
+<span id="line47"></span>						</span><span>&lt;<span class="start-tag">small</span>&gt;</span><span>Created by </span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a class="attribute-value" href="view-source:http://hakim.se/">http://hakim.se</a>"&gt;</span><span>Hakim El Hattab</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span> and </span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a class="attribute-value" href="view-source:https://github.com/hakimel/reveal.js/graphs/contributors">https://github.com/hakimel/reveal.js/graphs/contributors</a>"&gt;</span><span>contributors</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">small</span>&gt;</span><span>
+<span id="line48"></span>					</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line49"></span>					</span><span>&lt;<span class="start-tag">script</span> <span class="attribute-name">async</span> <span class="attribute-name">type</span>="<a class="attribute-value">text/javascript</a>" <span class="attribute-name">src</span>="<a class="attribute-value" href="view-source:https://cdn.carbonads.com/carbon.js?zoneid=1673&amp;serve=C6AILKT&amp;placement=revealjscom">//cdn.carbonads.com/carbon.js?zoneid=1673<span><span class="error" title="“&amp;” did not start a character reference. (“&amp;” probably should have been escaped as “&amp;amp;”.)">&amp;</span>se</span>rve=C6AILKT<span><span class="error" title="“&amp;” did not start a character reference. (“&amp;” probably should have been escaped as “&amp;amp;”.)">&amp;</span>pla</span>cement=revealjscom</a>" <span class="attribute-name">id</span>="<a class="attribute-value">_carbonads_js</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>
+<span id="line50"></span>				</span><span>&lt;/<span class="end-tag">section</span>&gt;</span><span>
+<span id="line51"></span>
+<span id="line52"></span>				</span><span>&lt;<span class="start-tag">section</span>&gt;</span><span>
+<span id="line53"></span>					</span><span>&lt;<span class="start-tag">h2</span>&gt;</span><span>Hello There</span><span>&lt;/<span class="end-tag">h2</span>&gt;</span><span>
+<span id="line54"></span>					</span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>
+<span id="line55"></span>						reveal.js enables you to create beautiful
+ interactive slide decks using HTML. This presentation will show you 
+examples of what it can do.
+<span id="line56"></span>					</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line57"></span>				</span><span>&lt;/<span class="end-tag">section</span>&gt;</span><span>
+<span id="line58"></span>
+<span id="line59"></span>				</span><span class="comment">&lt;!-- Example of nested vertical slides --&gt;</span><span>
+<span id="line60"></span>				</span><span>&lt;<span class="start-tag">section</span>&gt;</span><span>
+<span id="line61"></span>					</span><span>&lt;<span class="start-tag">section</span>&gt;</span><span>
+<span id="line62"></span>						</span><span>&lt;<span class="start-tag">h2</span>&gt;</span><span>Vertical Slides</span><span>&lt;/<span class="end-tag">h2</span>&gt;</span><span>
+<span id="line63"></span>						</span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>Slides can be nested inside of each other.</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line64"></span>						</span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>Use the </span><span>&lt;<span class="start-tag">em</span>&gt;</span><span>Space</span><span>&lt;/<span class="end-tag">em</span>&gt;</span><span> key to navigate through all slides.</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line65"></span>						</span><span>&lt;<span class="start-tag">br</span>&gt;</span><span>
+<span id="line66"></span>						</span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a class="attribute-value" href="view-source:https://revealjs.com/#">#</a>" <span class="attribute-name">class</span>="<a class="attribute-value">navigate-down</a>"&gt;</span><span>
+<span id="line67"></span>							</span><span>&lt;<span class="start-tag">img</span> <span class="attribute-name">width</span>="<a class="attribute-value">178</a>" <span class="attribute-name">height</span>="<a class="attribute-value">238</a>" <span class="attribute-name">data-src</span>="<a class="attribute-value">https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png</a>" <span class="attribute-name">alt</span>="<a class="attribute-value">Down arrow</a>"&gt;</span><span>
+<span id="line68"></span>						</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line69"></span>					</span><span>&lt;/<span class="end-tag">section</span>&gt;</span><span>
+<span id="line70"></span>					</span><span>&lt;<span class="start-tag">section</span>&gt;</span><span>
+<span id="line71"></span>						</span><span>&lt;<span class="start-tag">h2</span>&gt;</span><span>Basement Level 1</span><span>&lt;/<span class="end-tag">h2</span>&gt;</span><span>
+<span id="line72"></span>						</span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line73"></span>					</span><span>&lt;/<span class="end-tag">section</span>&gt;</span><span>
+<span id="line74"></span>					</span><span>&lt;<span class="start-tag">section</span>&gt;</span><span>
+<span id="line75"></span>						</span><span>&lt;<span class="start-tag">h2</span>&gt;</span><span>Basement Level 2</span><span>&lt;/<span class="end-tag">h2</span>&gt;</span><span>
+<span id="line76"></span>						</span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>That's it, time to go back up.</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line77"></span>						</span><span>&lt;<span class="start-tag">br</span>&gt;</span><span>
+<span id="line78"></span>						</span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a class="attribute-value" href="view-source:https://revealjs.com/#/2">#/2</a>"&gt;</span><span>
+<span id="line79"></span>							</span><span>&lt;<span class="start-tag">img</span> <span class="attribute-name">width</span>="<a class="attribute-value">178</a>" <span class="attribute-name">height</span>="<a class="attribute-value">238</a>" <span class="attribute-name">data-src</span>="<a class="attribute-value">https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png</a>" <span class="attribute-name">alt</span>="<a class="attribute-value">Up arrow</a>" <span class="attribute-name">style</span>="<a class="attribute-value">transform: rotate(180deg); -webkit-transform: rotate(180deg);</a>"&gt;</span><span>
+<span id="line80"></span>						</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line81"></span>					</span><span>&lt;/<span class="end-tag">section</span>&gt;</span><span>
+<span id="line82"></span>				</span><span>&lt;/<span class="end-tag">section</span>&gt;</span><span>
+<span id="line83"></span>
+<span id="line84"></span>				</span><span>&lt;<span class="start-tag">section</span>&gt;</span><span>
+<span id="line85"></span>					</span><span>&lt;<span class="start-tag">h2</span>&gt;</span><span>Slides</span><span>&lt;/<span class="end-tag">h2</span>&gt;</span><span>
+<span id="line86"></span>					</span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>
+<span id="line87"></span>						Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at </span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a class="attribute-value" href="view-source:https://slides.com/">https://slides.com</a>" <span class="attribute-name">target</span>="<a class="attribute-value">_blank</a>"&gt;</span><span>https://slides.com</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>.
+<span id="line88"></span>					</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line89"></span>				</span><span>&lt;/<span class="end-tag">section</span>&gt;</span><span>
+<span id="line90"></span>
+<span id="line91"></span>				</span><span>&lt;<span class="start-tag">section</span>&gt;</span><span>
+<span id="line92"></span>					</span><span>&lt;<span class="start-tag">h2</span>&gt;</span><span>Point of View</span><span>&lt;/<span class="end-tag">h2</span>&gt;</span><span>
+<span id="line93"></span>					</span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>
+<span id="line94"></span>						Press </span><span>&lt;<span class="start-tag">strong</span>&gt;</span><span>ESC</span><span>&lt;/<span class="end-tag">strong</span>&gt;</span><span> to enter the slide overview.
+<span id="line95"></span>					</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line96"></span>					</span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>
+<span id="line97"></span>						Hold down alt and click on any element to zoom in on it using </span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a class="attribute-value" href="view-source:http://lab.hakim.se/zoom-js">http://lab.hakim.se/zoom-js</a>"&gt;</span><span>zoom.js</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>. Alt + click anywhere to zoom back out.
+<span id="line98"></span>					</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line99"></span>				</span><span>&lt;/<span class="end-tag">section</span>&gt;</span><span>
+<span id="line100"></span>
+<span id="line101"></span>				</span><span>&lt;<span class="start-tag">section</span>&gt;</span><span>
+<span id="line102"></span>					</span><span>&lt;<span class="start-tag">h2</span>&gt;</span><span>Touch Optimized</span><span>&lt;/<span class="end-tag">h2</span>&gt;</span><span>
+<span id="line103"></span>					</span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>
+<span id="line104"></span>						Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
+<span id="line105"></span>					</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line106"></span>				</span><span>&lt;/<span class="end-tag">section</span>&gt;</span><span>
+<span id="line107"></span>
+<span id="line108"></span>				</span><span>&lt;<span class="start-tag">section</span> <span class="attribute-name">data-markdown</span>&gt;</span><span>
+<span id="line109"></span>					</span><span>&lt;<span class="start-tag">script</span> <span class="attribute-name">type</span>="<a class="attribute-value">text/template</a>"&gt;</span><span>
+<span id="line110"></span>						## Markdown support
+<span id="line111"></span>
+<span id="line112"></span>						Write content using inline or external Markdown.
+<span id="line113"></span>						Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
+<span id="line114"></span>
+<span id="line115"></span>						```
+<span id="line116"></span>						</span><span>&lt;s</span><span>ection data-markdown&gt;
+<span id="line117"></span>						  ## Markdown support
+<span id="line118"></span>
+<span id="line119"></span>						  Write content using inline or external Markdown.
+<span id="line120"></span>						  Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
+<span id="line121"></span>						</span><span>&lt;/<span>s</span>e</span><span>ction&gt;
+<span id="line122"></span>						```
+<span id="line123"></span>					</span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>
+<span id="line124"></span>				</span><span>&lt;/<span class="end-tag">section</span>&gt;</span><span>
+<span id="line125"></span>
+<span id="line126"></span>				</span><span>&lt;<span class="start-tag">section</span>&gt;</span><span>
+<span id="line127"></span>					</span><span>&lt;<span class="start-tag">section</span> <span class="attribute-name">id</span>="<a class="attribute-value">fragments</a>"&gt;</span><span>
+<span id="line128"></span>						</span><span>&lt;<span class="start-tag">h2</span>&gt;</span><span>Fragments</span><span>&lt;/<span class="end-tag">h2</span>&gt;</span><span>
+<span id="line129"></span>						</span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>Hit the next arrow...</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line130"></span>						</span><span>&lt;<span class="start-tag">p</span> <span class="attribute-name">class</span>="<a class="attribute-value">fragment</a>"&gt;</span><span>... to step through ...</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line131"></span>						</span><span>&lt;<span class="start-tag">p</span>&gt;</span><span></span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">class</span>="<a class="attribute-value">fragment</a>"&gt;</span><span>... a</span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span> </span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">class</span>="<a class="attribute-value">fragment</a>"&gt;</span><span>fragmented</span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span> </span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">class</span>="<a class="attribute-value">fragment</a>"&gt;</span><span>slide.</span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line132"></span>
+<span id="line133"></span>						</span><span>&lt;<span class="start-tag">aside</span> <span class="attribute-name">class</span>="<a class="attribute-value">notes</a>"&gt;</span><span>
+<span id="line134"></span>							This slide has fragments which are also stepped through in the notes window.
+<span id="line135"></span>						</span><span>&lt;/<span class="end-tag">aside</span>&gt;</span><span>
+<span id="line136"></span>					</span><span>&lt;/<span class="end-tag">section</span>&gt;</span><span>
+<span id="line137"></span>					</span><span>&lt;<span class="start-tag">section</span>&gt;</span><span>
+<span id="line138"></span>						</span><span>&lt;<span class="start-tag">h2</span>&gt;</span><span>Fragment Styles</span><span>&lt;/<span class="end-tag">h2</span>&gt;</span><span>
+<span id="line139"></span>						</span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>There's different types of fragments, like:</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line140"></span>						</span><span>&lt;<span class="start-tag">p</span> <span class="attribute-name">class</span>="<a class="attribute-value">fragment grow</a>"&gt;</span><span>grow</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line141"></span>						</span><span>&lt;<span class="start-tag">p</span> <span class="attribute-name">class</span>="<a class="attribute-value">fragment shrink</a>"&gt;</span><span>shrink</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line142"></span>						</span><span>&lt;<span class="start-tag">p</span> <span class="attribute-name">class</span>="<a class="attribute-value">fragment fade-out</a>"&gt;</span><span>fade-out</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line143"></span>						</span><span>&lt;<span class="start-tag">p</span> <span class="attribute-name">class</span>="<a class="attribute-value">fragment fade-up</a>"&gt;</span><span>fade-up (also down, left and right!)</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line144"></span>						</span><span>&lt;<span class="start-tag">p</span> <span class="attribute-name">class</span>="<a class="attribute-value">fragment current-visible</a>"&gt;</span><span>current-visible</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line145"></span>						</span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>Highlight </span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">class</span>="<a class="attribute-value">fragment highlight-red</a>"&gt;</span><span>red</span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span> </span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">class</span>="<a class="attribute-value">fragment highlight-blue</a>"&gt;</span><span>blue</span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span> </span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">class</span>="<a class="attribute-value">fragment highlight-green</a>"&gt;</span><span>green</span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line146"></span>					</span><span>&lt;/<span class="end-tag">section</span>&gt;</span><span>
+<span id="line147"></span>				</span><span>&lt;/<span class="end-tag">section</span>&gt;</span><span>
+<span id="line148"></span>
+<span id="line149"></span>				</span><span>&lt;<span class="start-tag">section</span> <span class="attribute-name">id</span>="<a class="attribute-value">transitions</a>"&gt;</span><span>
+<span id="line150"></span>					</span><span>&lt;<span class="start-tag">h2</span>&gt;</span><span>Transition Styles</span><span>&lt;/<span class="end-tag">h2</span>&gt;</span><span>
+<span id="line151"></span>					</span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>
+<span id="line152"></span>						You can select from different transitions, like: </span><span>&lt;<span class="start-tag">br</span>&gt;</span><span>
+<span id="line153"></span>						</span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a class="attribute-value" href="view-source:https://revealjs.com/?transition=none#/transitions">?transition=none#/transitions</a>"&gt;</span><span>None</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span> -
+<span id="line154"></span>						</span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a class="attribute-value" href="view-source:https://revealjs.com/?transition=fade#/transitions">?transition=fade#/transitions</a>"&gt;</span><span>Fade</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span> -
+<span id="line155"></span>						</span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a class="attribute-value" href="view-source:https://revealjs.com/?transition=slide#/transitions">?transition=slide#/transitions</a>"&gt;</span><span>Slide</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span> -
+<span id="line156"></span>						</span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a class="attribute-value" href="view-source:https://revealjs.com/?transition=convex#/transitions">?transition=convex#/transitions</a>"&gt;</span><span>Convex</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span> -
+<span id="line157"></span>						</span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a class="attribute-value" href="view-source:https://revealjs.com/?transition=concave#/transitions">?transition=concave#/transitions</a>"&gt;</span><span>Concave</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span> -
+<span id="line158"></span>						</span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a class="attribute-value" href="view-source:https://revealjs.com/?transition=zoom#/transitions">?transition=zoom#/transitions</a>"&gt;</span><span>Zoom</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line159"></span>					</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line160"></span>				</span><span>&lt;/<span class="end-tag">section</span>&gt;</span><span>
+<span id="line161"></span>
+<span id="line162"></span>				</span><span>&lt;<span class="start-tag">section</span> <span class="attribute-name">id</span>="<a class="attribute-value">themes</a>"&gt;</span><span>
+<span id="line163"></span>					</span><span>&lt;<span class="start-tag">h2</span>&gt;</span><span>Themes</span><span>&lt;/<span class="end-tag">h2</span>&gt;</span><span>
+<span id="line164"></span>					</span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>
+<span id="line165"></span>						reveal.js comes with a few themes built in: </span><span>&lt;<span class="start-tag">br</span>&gt;</span><span>
+<span id="line166"></span>						</span><span class="comment">&lt;!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. --&gt;</span><span>
+<span id="line167"></span>						</span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a class="attribute-value" href="view-source:https://revealjs.com/#">#</a>" <span class="attribute-name">onclick</span>="<a class="attribute-value">document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;</a>"&gt;</span><span>Black (default)</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span> -
+<span id="line168"></span>						</span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a class="attribute-value" href="view-source:https://revealjs.com/#">#</a>" <span class="attribute-name">onclick</span>="<a class="attribute-value">document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;</a>"&gt;</span><span>White</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span> -
+<span id="line169"></span>						</span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a class="attribute-value" href="view-source:https://revealjs.com/#">#</a>" <span class="attribute-name">onclick</span>="<a class="attribute-value">document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;</a>"&gt;</span><span>League</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span> -
+<span id="line170"></span>						</span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a class="attribute-value" href="view-source:https://revealjs.com/#">#</a>" <span class="attribute-name">onclick</span>="<a class="attribute-value">document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;</a>"&gt;</span><span>Sky</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span> -
+<span id="line171"></span>						</span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a class="attribute-value" href="view-source:https://revealjs.com/#">#</a>" <span class="attribute-name">onclick</span>="<a class="attribute-value">document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;</a>"&gt;</span><span>Beige</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span> -
+<span id="line172"></span>						</span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a class="attribute-value" href="view-source:https://revealjs.com/#">#</a>" <span class="attribute-name">onclick</span>="<a class="attribute-value">document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;</a>"&gt;</span><span>Simple</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span> </span><span>&lt;<span class="start-tag">br</span>&gt;</span><span>
+<span id="line173"></span>						</span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a class="attribute-value" href="view-source:https://revealjs.com/#">#</a>" <span class="attribute-name">onclick</span>="<a class="attribute-value">document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;</a>"&gt;</span><span>Serif</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span> -
+<span id="line174"></span>						</span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a class="attribute-value" href="view-source:https://revealjs.com/#">#</a>" <span class="attribute-name">onclick</span>="<a class="attribute-value">document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return false;</a>"&gt;</span><span>Blood</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span> -
+<span id="line175"></span>						</span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a class="attribute-value" href="view-source:https://revealjs.com/#">#</a>" <span class="attribute-name">onclick</span>="<a class="attribute-value">document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;</a>"&gt;</span><span>Night</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span> -
+<span id="line176"></span>						</span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a class="attribute-value" href="view-source:https://revealjs.com/#">#</a>" <span class="attribute-name">onclick</span>="<a class="attribute-value">document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;</a>"&gt;</span><span>Moon</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span> -
+<span id="line177"></span>						</span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a class="attribute-value" href="view-source:https://revealjs.com/#">#</a>" <span class="attribute-name">onclick</span>="<a class="attribute-value">document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;</a>"&gt;</span><span>Solarized</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line178"></span>					</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line179"></span>				</span><span>&lt;/<span class="end-tag">section</span>&gt;</span><span>
+<span id="line180"></span>
+<span id="line181"></span>				</span><span>&lt;<span class="start-tag">section</span>&gt;</span><span>
+<span id="line182"></span>					</span><span>&lt;<span class="start-tag">section</span> <span class="attribute-name">data-background</span>="<a class="attribute-value">#dddddd</a>"&gt;</span><span>
+<span id="line183"></span>						</span><span>&lt;<span class="start-tag">h2</span>&gt;</span><span>Slide Backgrounds</span><span>&lt;/<span class="end-tag">h2</span>&gt;</span><span>
+<span id="line184"></span>						</span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>
+<span id="line185"></span>							Set </span><span>&lt;<span class="start-tag">code</span>&gt;</span><span>data-background="#dddddd"</span><span>&lt;/<span class="end-tag">code</span>&gt;</span><span> on a slide to change the background color. All CSS color formats are supported.
+<span id="line186"></span>						</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line187"></span>						</span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a class="attribute-value" href="view-source:https://revealjs.com/#">#</a>" <span class="attribute-name">class</span>="<a class="attribute-value">navigate-down</a>"&gt;</span><span>
+<span id="line188"></span>							</span><span>&lt;<span class="start-tag">img</span> <span class="attribute-name">width</span>="<a class="attribute-value">178</a>" <span class="attribute-name">height</span>="<a class="attribute-value">238</a>" <span class="attribute-name">data-src</span>="<a class="attribute-value">https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png</a>" <span class="attribute-name">alt</span>="<a class="attribute-value">Down arrow</a>"&gt;</span><span>
+<span id="line189"></span>						</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line190"></span>					</span><span>&lt;/<span class="end-tag">section</span>&gt;</span><span>
+<span id="line191"></span>					</span><span>&lt;<span class="start-tag">section</span> <span class="attribute-name">data-background</span>="<a class="attribute-value">https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png</a>"&gt;</span><span>
+<span id="line192"></span>						</span><span>&lt;<span class="start-tag">h2</span>&gt;</span><span>Image Backgrounds</span><span>&lt;/<span class="end-tag">h2</span>&gt;</span><span>
+<span id="line193"></span>						</span><span>&lt;<span class="start-tag">pre</span>&gt;</span><span></span><span>&lt;<span class="start-tag">code</span> <span class="attribute-name">class</span>="<a class="attribute-value">hljs</a>"&gt;</span><span><span class="entity"><span>&amp;</span>lt;</span>section data-background="image.png"<span class="entity"><span>&amp;</span>gt;</span></span><span>&lt;/<span class="end-tag">code</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">pre</span>&gt;</span><span>
+<span id="line194"></span>					</span><span>&lt;/<span class="end-tag">section</span>&gt;</span><span>
+<span id="line195"></span>					</span><span>&lt;<span class="start-tag">section</span> <span class="attribute-name">data-background</span>="<a class="attribute-value">https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png</a>" <span class="attribute-name">data-background-repeat</span>="<a class="attribute-value">repeat</a>" <span class="attribute-name">data-background-size</span>="<a class="attribute-value">100px</a>"&gt;</span><span>
+<span id="line196"></span>						</span><span>&lt;<span class="start-tag">h2</span>&gt;</span><span>Tiled Backgrounds</span><span>&lt;/<span class="end-tag">h2</span>&gt;</span><span>
+<span id="line197"></span>						</span><span>&lt;<span class="start-tag">pre</span>&gt;</span><span></span><span>&lt;<span class="start-tag">code</span> <span class="attribute-name">class</span>="<a class="attribute-value">hljs</a>" <span class="attribute-name">style</span>="<a class="attribute-value">word-wrap: break-word;</a>"&gt;</span><span><span class="entity"><span>&amp;</span>lt;</span>section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"<span class="entity"><span>&amp;</span>gt;</span></span><span>&lt;/<span class="end-tag">code</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">pre</span>&gt;</span><span>
+<span id="line198"></span>					</span><span>&lt;/<span class="end-tag">section</span>&gt;</span><span>
+<span id="line199"></span>					</span><span>&lt;<span class="start-tag">section</span> <span class="attribute-name">data-background-video</span>="<a class="attribute-value">https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm</a>" <span class="attribute-name">data-background-color</span>="<a class="attribute-value">#000000</a>"&gt;</span><span>
+<span id="line200"></span>						</span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">style</span>="<a class="attribute-value">background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;</a>"&gt;</span><span>
+<span id="line201"></span>							</span><span>&lt;<span class="start-tag">h2</span>&gt;</span><span>Video Backgrounds</span><span>&lt;/<span class="end-tag">h2</span>&gt;</span><span>
+<span id="line202"></span>							</span><span>&lt;<span class="start-tag">pre</span>&gt;</span><span></span><span>&lt;<span class="start-tag">code</span> <span class="attribute-name">class</span>="<a class="attribute-value">hljs</a>" <span class="attribute-name">style</span>="<a class="attribute-value">word-wrap: break-word;</a>"&gt;</span><span><span class="entity"><span>&amp;</span>lt;</span>section data-background-video="video.mp4,video.webm"<span class="entity"><span>&amp;</span>gt;</span></span><span>&lt;/<span class="end-tag">code</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">pre</span>&gt;</span><span>
+<span id="line203"></span>						</span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line204"></span>					</span><span>&lt;/<span class="end-tag">section</span>&gt;</span><span>
+<span id="line205"></span>					</span><span>&lt;<span class="start-tag">section</span> <span class="attribute-name">data-background</span>="<a class="attribute-value">http://i.giphy.com/90F8aUepslB84.gif</a>"&gt;</span><span>
+<span id="line206"></span>						</span><span>&lt;<span class="start-tag">h2</span>&gt;</span><span>... and GIFs!</span><span>&lt;/<span class="end-tag">h2</span>&gt;</span><span>
+<span id="line207"></span>					</span><span>&lt;/<span class="end-tag">section</span>&gt;</span><span>
+<span id="line208"></span>				</span><span>&lt;/<span class="end-tag">section</span>&gt;</span><span>
+<span id="line209"></span>
+<span id="line210"></span>				</span><span>&lt;<span class="start-tag">section</span> <span class="attribute-name">data-transition</span>="<a class="attribute-value">slide</a>" <span class="attribute-name">data-background</span>="<a class="attribute-value">#4d7e65</a>" <span class="attribute-name">data-background-transition</span>="<a class="attribute-value">zoom</a>"&gt;</span><span>
+<span id="line211"></span>					</span><span>&lt;<span class="start-tag">h2</span>&gt;</span><span>Background Transitions</span><span>&lt;/<span class="end-tag">h2</span>&gt;</span><span>
+<span id="line212"></span>					</span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>
+<span id="line213"></span>						Different background transitions are available via the backgroundTransition option. This one's called "zoom".
+<span id="line214"></span>					</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line215"></span>					</span><span>&lt;<span class="start-tag">pre</span>&gt;</span><span></span><span>&lt;<span class="start-tag">code</span> <span class="attribute-name">class</span>="<a class="attribute-value">hljs</a>"&gt;</span><span>Reveal.configure({ backgroundTransition: 'zoom' })</span><span>&lt;/<span class="end-tag">code</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">pre</span>&gt;</span><span>
+<span id="line216"></span>				</span><span>&lt;/<span class="end-tag">section</span>&gt;</span><span>
+<span id="line217"></span>
+<span id="line218"></span>				</span><span>&lt;<span class="start-tag">section</span> <span class="attribute-name">data-transition</span>="<a class="attribute-value">slide</a>" <span class="attribute-name">data-background</span>="<a class="attribute-value">#b5533c</a>" <span class="attribute-name">data-background-transition</span>="<a class="attribute-value">zoom</a>"&gt;</span><span>
+<span id="line219"></span>					</span><span>&lt;<span class="start-tag">h2</span>&gt;</span><span>Background Transitions</span><span>&lt;/<span class="end-tag">h2</span>&gt;</span><span>
+<span id="line220"></span>					</span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>
+<span id="line221"></span>						You can override background transitions per-slide.
+<span id="line222"></span>					</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line223"></span>					</span><span>&lt;<span class="start-tag">pre</span>&gt;</span><span></span><span>&lt;<span class="start-tag">code</span> <span class="attribute-name">class</span>="<a class="attribute-value">hljs</a>" <span class="attribute-name">style</span>="<a class="attribute-value">word-wrap: break-word;</a>"&gt;</span><span><span class="entity"><span>&amp;</span>lt;</span>section data-background-transition="zoom"<span class="entity"><span>&amp;</span>gt;</span></span><span>&lt;/<span class="end-tag">code</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">pre</span>&gt;</span><span>
+<span id="line224"></span>				</span><span>&lt;/<span class="end-tag">section</span>&gt;</span><span>
+<span id="line225"></span>
+<span id="line226"></span>				</span><span>&lt;<span class="start-tag">section</span>&gt;</span><span>
+<span id="line227"></span>					</span><span>&lt;<span class="start-tag">h2</span>&gt;</span><span>Pretty Code</span><span>&lt;/<span class="end-tag">h2</span>&gt;</span><span>
+<span id="line228"></span>					</span><span>&lt;<span class="start-tag">pre</span>&gt;</span><span></span><span>&lt;<span class="start-tag">code</span> <span class="attribute-name">class</span>="<a class="attribute-value">hljs</a>" <span class="attribute-name">data-trim</span> <span class="attribute-name">contenteditable</span>&gt;</span><span>
+<span id="line229"></span>function linkify( selector ) {
+<span id="line230"></span>  if( supports3DTransforms ) {
+<span id="line231"></span>
+<span id="line232"></span>    var nodes = document.querySelectorAll( selector );
+<span id="line233"></span>
+<span id="line234"></span>    for( var i = 0, len = nodes.length; i <span class="entity"><span>&amp;</span>lt;</span> len; i++ ) {
+<span id="line235"></span>      var node = nodes[i];
+<span id="line236"></span>
+<span id="line237"></span>      if( !node.className ) {
+<span id="line238"></span>        node.className += ' roll';
+<span id="line239"></span>      }
+<span id="line240"></span>    }
+<span id="line241"></span>  }
+<span id="line242"></span>}
+<span id="line243"></span>					</span><span>&lt;/<span class="end-tag">code</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">pre</span>&gt;</span><span>
+<span id="line244"></span>					</span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>Code syntax highlighting courtesy of </span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a class="attribute-value" href="view-source:http://softwaremaniacs.org/soft/highlight/en/description/">http://softwaremaniacs.org/soft/highlight/en/description/</a>"&gt;</span><span>highlight.js</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>.</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line245"></span>				</span><span>&lt;/<span class="end-tag">section</span>&gt;</span><span>
+<span id="line246"></span>
+<span id="line247"></span>				</span><span>&lt;<span class="start-tag">section</span>&gt;</span><span>
+<span id="line248"></span>					</span><span>&lt;<span class="start-tag">h2</span>&gt;</span><span>Marvelous List</span><span>&lt;/<span class="end-tag">h2</span>&gt;</span><span>
+<span id="line249"></span>					</span><span>&lt;<span class="start-tag">ul</span>&gt;</span><span>
+<span id="line250"></span>						</span><span>&lt;<span class="start-tag">li</span>&gt;</span><span>No order here</span><span>&lt;/<span class="end-tag">li</span>&gt;</span><span>
+<span id="line251"></span>						</span><span>&lt;<span class="start-tag">li</span>&gt;</span><span>Or here</span><span>&lt;/<span class="end-tag">li</span>&gt;</span><span>
+<span id="line252"></span>						</span><span>&lt;<span class="start-tag">li</span>&gt;</span><span>Or here</span><span>&lt;/<span class="end-tag">li</span>&gt;</span><span>
+<span id="line253"></span>						</span><span>&lt;<span class="start-tag">li</span>&gt;</span><span>Or here</span><span>&lt;/<span class="end-tag">li</span>&gt;</span><span>
+<span id="line254"></span>					</span><span>&lt;/<span class="end-tag">ul</span>&gt;</span><span>
+<span id="line255"></span>				</span><span>&lt;/<span class="end-tag">section</span>&gt;</span><span>
+<span id="line256"></span>
+<span id="line257"></span>				</span><span>&lt;<span class="start-tag">section</span>&gt;</span><span>
+<span id="line258"></span>					</span><span>&lt;<span class="start-tag">h2</span>&gt;</span><span>Fantastic Ordered List</span><span>&lt;/<span class="end-tag">h2</span>&gt;</span><span>
+<span id="line259"></span>					</span><span>&lt;<span class="start-tag">ol</span>&gt;</span><span>
+<span id="line260"></span>						</span><span>&lt;<span class="start-tag">li</span>&gt;</span><span>One is smaller than...</span><span>&lt;/<span class="end-tag">li</span>&gt;</span><span>
+<span id="line261"></span>						</span><span>&lt;<span class="start-tag">li</span>&gt;</span><span>Two is smaller than...</span><span>&lt;/<span class="end-tag">li</span>&gt;</span><span>
+<span id="line262"></span>						</span><span>&lt;<span class="start-tag">li</span>&gt;</span><span>Three!</span><span>&lt;/<span class="end-tag">li</span>&gt;</span><span>
+<span id="line263"></span>					</span><span>&lt;/<span class="end-tag">ol</span>&gt;</span><span>
+<span id="line264"></span>				</span><span>&lt;/<span class="end-tag">section</span>&gt;</span><span>
+<span id="line265"></span>
+<span id="line266"></span>				</span><span>&lt;<span class="start-tag">section</span>&gt;</span><span>
+<span id="line267"></span>					</span><span>&lt;<span class="start-tag">h2</span>&gt;</span><span>Tabular Tables</span><span>&lt;/<span class="end-tag">h2</span>&gt;</span><span>
+<span id="line268"></span>					</span><span>&lt;<span class="start-tag">table</span>&gt;</span><span>
+<span id="line269"></span>						</span><span>&lt;<span class="start-tag">thead</span>&gt;</span><span>
+<span id="line270"></span>							</span><span>&lt;<span class="start-tag">tr</span>&gt;</span><span>
+<span id="line271"></span>								</span><span>&lt;<span class="start-tag">th</span>&gt;</span><span>Item</span><span>&lt;/<span class="end-tag">th</span>&gt;</span><span>
+<span id="line272"></span>								</span><span>&lt;<span class="start-tag">th</span>&gt;</span><span>Value</span><span>&lt;/<span class="end-tag">th</span>&gt;</span><span>
+<span id="line273"></span>								</span><span>&lt;<span class="start-tag">th</span>&gt;</span><span>Quantity</span><span>&lt;/<span class="end-tag">th</span>&gt;</span><span>
+<span id="line274"></span>							</span><span>&lt;/<span class="end-tag">tr</span>&gt;</span><span>
+<span id="line275"></span>						</span><span>&lt;/<span class="end-tag">thead</span>&gt;</span><span>
+<span id="line276"></span>						</span><span>&lt;<span class="start-tag">tbody</span>&gt;</span><span>
+<span id="line277"></span>							</span><span>&lt;<span class="start-tag">tr</span>&gt;</span><span>
+<span id="line278"></span>								</span><span>&lt;<span class="start-tag">td</span>&gt;</span><span>Apples</span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line279"></span>								</span><span>&lt;<span class="start-tag">td</span>&gt;</span><span>$1</span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line280"></span>								</span><span>&lt;<span class="start-tag">td</span>&gt;</span><span>7</span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line281"></span>							</span><span>&lt;/<span class="end-tag">tr</span>&gt;</span><span>
+<span id="line282"></span>							</span><span>&lt;<span class="start-tag">tr</span>&gt;</span><span>
+<span id="line283"></span>								</span><span>&lt;<span class="start-tag">td</span>&gt;</span><span>Lemonade</span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line284"></span>								</span><span>&lt;<span class="start-tag">td</span>&gt;</span><span>$2</span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line285"></span>								</span><span>&lt;<span class="start-tag">td</span>&gt;</span><span>18</span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line286"></span>							</span><span>&lt;/<span class="end-tag">tr</span>&gt;</span><span>
+<span id="line287"></span>							</span><span>&lt;<span class="start-tag">tr</span>&gt;</span><span>
+<span id="line288"></span>								</span><span>&lt;<span class="start-tag">td</span>&gt;</span><span>Bread</span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line289"></span>								</span><span>&lt;<span class="start-tag">td</span>&gt;</span><span>$3</span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line290"></span>								</span><span>&lt;<span class="start-tag">td</span>&gt;</span><span>2</span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line291"></span>							</span><span>&lt;/<span class="end-tag">tr</span>&gt;</span><span>
+<span id="line292"></span>						</span><span>&lt;/<span class="end-tag">tbody</span>&gt;</span><span>
+<span id="line293"></span>					</span><span>&lt;/<span class="end-tag">table</span>&gt;</span><span>
+<span id="line294"></span>				</span><span>&lt;/<span class="end-tag">section</span>&gt;</span><span>
+<span id="line295"></span>
+<span id="line296"></span>				</span><span>&lt;<span class="start-tag">section</span>&gt;</span><span>
+<span id="line297"></span>					</span><span>&lt;<span class="start-tag">h2</span>&gt;</span><span>Clever Quotes</span><span>&lt;/<span class="end-tag">h2</span>&gt;</span><span>
+<span id="line298"></span>					</span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>
+<span id="line299"></span>						These guys come in two forms, inline: </span><span>&lt;<span class="start-tag">q</span> <span class="attribute-name">cite</span>="<a class="attribute-value" href="view-source:http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations</a>"&gt;</span><span>The nice thing about standards is that there are so many to choose from</span><span>&lt;/<span class="end-tag">q</span>&gt;</span><span> and block:
+<span id="line300"></span>					</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line301"></span>					</span><span>&lt;<span class="start-tag">blockquote</span> <span class="attribute-name">cite</span>="<a class="attribute-value" href="view-source:http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations</a>"&gt;</span><span>
+<span id="line302"></span>						<span class="entity"><span>&amp;</span>ldquo;</span>For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
+<span id="line303"></span>						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.<span class="entity"><span>&amp;</span>rdquo;</span>
+<span id="line304"></span>					</span><span>&lt;/<span class="end-tag">blockquote</span>&gt;</span><span>
+<span id="line305"></span>				</span><span>&lt;/<span class="end-tag">section</span>&gt;</span><span>
+<span id="line306"></span>
+<span id="line307"></span>				</span><span>&lt;<span class="start-tag">section</span>&gt;</span><span>
+<span id="line308"></span>					</span><span>&lt;<span class="start-tag">h2</span>&gt;</span><span>Intergalactic Interconnections</span><span>&lt;/<span class="end-tag">h2</span>&gt;</span><span>
+<span id="line309"></span>					</span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>
+<span id="line310"></span>						You can link between slides internally,
+<span id="line311"></span>						</span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a class="attribute-value" href="view-source:https://revealjs.com/#/2/3">#/2/3</a>"&gt;</span><span>like this</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>.
+<span id="line312"></span>					</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line313"></span>				</span><span>&lt;/<span class="end-tag">section</span>&gt;</span><span>
+<span id="line314"></span>
+<span id="line315"></span>				</span><span>&lt;<span class="start-tag">section</span>&gt;</span><span>
+<span id="line316"></span>					</span><span>&lt;<span class="start-tag">h2</span>&gt;</span><span>Speaker View</span><span>&lt;/<span class="end-tag">h2</span>&gt;</span><span>
+<span id="line317"></span>					</span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>There's a </span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a class="attribute-value" href="view-source:https://github.com/hakimel/reveal.js#speaker-notes">https://github.com/hakimel/reveal.js#speaker-notes</a>"&gt;</span><span>speaker view</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line318"></span>					</span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>Press the </span><span>&lt;<span class="start-tag">em</span>&gt;</span><span>S</span><span>&lt;/<span class="end-tag">em</span>&gt;</span><span> key to try it out.</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line319"></span>
+<span id="line320"></span>					</span><span>&lt;<span class="start-tag">aside</span> <span class="attribute-name">class</span>="<a class="attribute-value">notes</a>"&gt;</span><span>
+<span id="line321"></span>						Oh hey, these are some notes. They'll be
+ hidden in your presentation, but you can see them if you open the 
+speaker notes window (hit 's' on your keyboard).
+<span id="line322"></span>					</span><span>&lt;/<span class="end-tag">aside</span>&gt;</span><span>
+<span id="line323"></span>				</span><span>&lt;/<span class="end-tag">section</span>&gt;</span><span>
+<span id="line324"></span>
+<span id="line325"></span>				</span><span>&lt;<span class="start-tag">section</span>&gt;</span><span>
+<span id="line326"></span>					</span><span>&lt;<span class="start-tag">h2</span>&gt;</span><span>Export to PDF</span><span>&lt;/<span class="end-tag">h2</span>&gt;</span><span>
+<span id="line327"></span>					</span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>Presentations can be </span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a class="attribute-value" href="view-source:https://github.com/hakimel/reveal.js#pdf-export">https://github.com/hakimel/reveal.js#pdf-export</a>"&gt;</span><span>exported to PDF</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>, here's an example:</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line328"></span>					</span><span>&lt;<span class="start-tag">iframe</span> <span class="attribute-name">data-src</span>="<a class="attribute-value">https://www.slideshare.net/slideshow/embed_code/42840540</a>" <span class="attribute-name">width</span>="<a class="attribute-value">445</a>" <span class="attribute-name">height</span>="<a class="attribute-value">355</a>" <span class="attribute-name">frameborder</span>="<a class="attribute-value">0</a>" <span class="attribute-name">marginwidth</span>="<a class="attribute-value">0</a>" <span class="attribute-name">marginheight</span>="<a class="attribute-value">0</a>" <span class="attribute-name">scrolling</span>="<a class="attribute-value">no</a>" <span class="attribute-name">style</span>="<a class="attribute-value">border:3px solid #666; margin-bottom:5px; max-width: 100%;</a>" <span class="attribute-name">allowfullscreen</span>&gt;</span><span> </span><span>&lt;/<span class="end-tag">iframe</span>&gt;</span><span>
+<span id="line329"></span>				</span><span>&lt;/<span class="end-tag">section</span>&gt;</span><span>
+<span id="line330"></span>
+<span id="line331"></span>				</span><span>&lt;<span class="start-tag">section</span>&gt;</span><span>
+<span id="line332"></span>					</span><span>&lt;<span class="start-tag">h2</span>&gt;</span><span>Global State</span><span>&lt;/<span class="end-tag">h2</span>&gt;</span><span>
+<span id="line333"></span>					</span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>
+<span id="line334"></span>						Set </span><span>&lt;<span class="start-tag">code</span>&gt;</span><span>data-state="something"</span><span>&lt;/<span class="end-tag">code</span>&gt;</span><span> on a slide and </span><span>&lt;<span class="start-tag">code</span>&gt;</span><span>"something"</span><span>&lt;/<span class="end-tag">code</span>&gt;</span><span>
+<span id="line335"></span>						will be added as a class to the document element when the slide is open. This lets you
+<span id="line336"></span>						apply broader style changes, like switching the page background.
+<span id="line337"></span>					</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line338"></span>				</span><span>&lt;/<span class="end-tag">section</span>&gt;</span><span>
+<span id="line339"></span>
+<span id="line340"></span>				</span><span>&lt;<span class="start-tag">section</span> <span class="attribute-name">data-state</span>="<a class="attribute-value">customevent</a>"&gt;</span><span>
+<span id="line341"></span>					</span><span>&lt;<span class="start-tag">h2</span>&gt;</span><span>State Events</span><span>&lt;/<span class="end-tag">h2</span>&gt;</span><span>
+<span id="line342"></span>					</span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>
+<span id="line343"></span>						Additionally custom events can be triggered on a per slide basis by binding to the </span><span>&lt;<span class="start-tag">code</span>&gt;</span><span>data-state</span><span>&lt;/<span class="end-tag">code</span>&gt;</span><span> name.
+<span id="line344"></span>					</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line345"></span>					</span><span>&lt;<span class="start-tag">pre</span>&gt;</span><span></span><span>&lt;<span class="start-tag">code</span> <span class="attribute-name">class</span>="<a class="attribute-value">javascript</a>" <span class="attribute-name">data-trim</span> <span class="attribute-name">contenteditable</span> <span class="attribute-name">style</span>="<a class="attribute-value">font-size: 18px;</a>"&gt;</span><span>
+<span id="line346"></span>Reveal.addEventListener( 'customevent', function() {
+<span id="line347"></span>	console.log( '"customevent" has fired' );
+<span id="line348"></span>} );
+<span id="line349"></span>					</span><span>&lt;/<span class="end-tag">code</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">pre</span>&gt;</span><span>
+<span id="line350"></span>				</span><span>&lt;/<span class="end-tag">section</span>&gt;</span><span>
+<span id="line351"></span>
+<span id="line352"></span>				</span><span>&lt;<span class="start-tag">section</span>&gt;</span><span>
+<span id="line353"></span>					</span><span>&lt;<span class="start-tag">h2</span>&gt;</span><span>Take a Moment</span><span>&lt;/<span class="end-tag">h2</span>&gt;</span><span>
+<span id="line354"></span>					</span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>
+<span id="line355"></span>						Press B or . on your keyboard to pause 
+the presentation. This is helpful when you're on stage and want to take 
+distracting slides off the screen.
+<span id="line356"></span>					</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line357"></span>				</span><span>&lt;/<span class="end-tag">section</span>&gt;</span><span>
+<span id="line358"></span>
+<span id="line359"></span>				</span><span>&lt;<span class="start-tag">section</span>&gt;</span><span>
+<span id="line360"></span>					</span><span>&lt;<span class="start-tag">h2</span>&gt;</span><span>Much more</span><span>&lt;/<span class="end-tag">h2</span>&gt;</span><span>
+<span id="line361"></span>					</span><span>&lt;<span class="start-tag">ul</span>&gt;</span><span>
+<span id="line362"></span>						</span><span>&lt;<span class="start-tag">li</span>&gt;</span><span>Right-to-left support</span><span>&lt;/<span class="end-tag">li</span>&gt;</span><span>
+<span id="line363"></span>						</span><span>&lt;<span class="start-tag">li</span>&gt;</span><span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a class="attribute-value" href="view-source:https://github.com/hakimel/reveal.js#api">https://github.com/hakimel/reveal.js#api</a>"&gt;</span><span>Extensive JavaScript API</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">li</span>&gt;</span><span>
+<span id="line364"></span>						</span><span>&lt;<span class="start-tag">li</span>&gt;</span><span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a class="attribute-value" href="view-source:https://github.com/hakimel/reveal.js#auto-sliding">https://github.com/hakimel/reveal.js#auto-sliding</a>"&gt;</span><span>Auto-progression</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">li</span>&gt;</span><span>
+<span id="line365"></span>						</span><span>&lt;<span class="start-tag">li</span>&gt;</span><span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a class="attribute-value" href="view-source:https://github.com/hakimel/reveal.js#parallax-background">https://github.com/hakimel/reveal.js#parallax-background</a>"&gt;</span><span>Parallax backgrounds</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">li</span>&gt;</span><span>
+<span id="line366"></span>						</span><span>&lt;<span class="start-tag">li</span>&gt;</span><span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a class="attribute-value" href="view-source:https://github.com/hakimel/reveal.js#keyboard-bindings">https://github.com/hakimel/reveal.js#keyboard-bindings</a>"&gt;</span><span>Custom keyboard bindings</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">li</span>&gt;</span><span>
+<span id="line367"></span>					</span><span>&lt;/<span class="end-tag">ul</span>&gt;</span><span>
+<span id="line368"></span>				</span><span>&lt;/<span class="end-tag">section</span>&gt;</span><span>
+<span id="line369"></span>
+<span id="line370"></span>				</span><span>&lt;<span class="start-tag">section</span> <span class="attribute-name">style</span>="<a class="attribute-value">text-align: left;</a>"&gt;</span><span>
+<span id="line371"></span>					</span><span>&lt;<span class="start-tag">h1</span>&gt;</span><span>THE END</span><span>&lt;/<span class="end-tag">h1</span>&gt;</span><span>
+<span id="line372"></span>					</span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>
+<span id="line373"></span>						- </span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a class="attribute-value" href="view-source:https://slides.com/">https://slides.com</a>"&gt;</span><span>Try the online editor</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span> </span><span>&lt;<span class="start-tag">br</span>&gt;</span><span>
+<span id="line374"></span>						- </span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a class="attribute-value" href="view-source:https://github.com/hakimel/reveal.js">https://github.com/hakimel/reveal.js</a>"&gt;</span><span>Source code <span class="entity"><span>&amp;</span>amp;</span> documentation</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line375"></span>					</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line376"></span>				</span><span>&lt;/<span class="end-tag">section</span>&gt;</span><span>
+<span id="line377"></span>
+<span id="line378"></span>			</span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line379"></span>
+<span id="line380"></span>		</span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line381"></span>
+<span id="line382"></span>		</span><span>&lt;<span class="start-tag">script</span> <span class="attribute-name">src</span>="<a class="attribute-value" href="view-source:https://revealjs.com/lib/js/head.min.js">lib/js/head.min.js</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>
+<span id="line383"></span>		</span><span>&lt;<span class="start-tag">script</span> <span class="attribute-name">src</span>="<a class="attribute-value" href="view-source:https://revealjs.com/js/reveal.js">js/reveal.js</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>
+<span id="line384"></span>
+<span id="line385"></span>		</span><span>&lt;<span class="start-tag">script</span>&gt;</span><span>
+<span id="line386"></span>
+<span id="line387"></span>			// More info https://github.com/hakimel/reveal.js#configuration
+<span id="line388"></span>			Reveal.initialize({
+<span id="line389"></span>				controls: true,
+<span id="line390"></span>				progress: true,
+<span id="line391"></span>				history: true,
+<span id="line392"></span>				center: true,
+<span id="line393"></span>
+<span id="line394"></span>				transition: 'slide', // none/fade/slide/convex/concave/zoom
+<span id="line395"></span>
+<span id="line396"></span>				// More info https://github.com/hakimel/reveal.js#dependencies
+<span id="line397"></span>				dependencies: [
+<span id="line398"></span>					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+<span id="line399"></span>					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+<span id="line400"></span>					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+<span id="line401"></span>					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+<span id="line402"></span>					{ src: 'plugin/search/search.js', async: true },
+<span id="line403"></span>					{ src: 'plugin/zoom-js/zoom.js', async: true },
+<span id="line404"></span>					{ src: 'plugin/notes/notes.js', async: true }
+<span id="line405"></span>				]
+<span id="line406"></span>			});
+<span id="line407"></span>
+<span id="line408"></span>		</span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>
+<span id="line409"></span>
+<span id="line410"></span>		</span><span class="comment">&lt;!-- Everything below this point is only used for the reveal.js demo page --&gt;</span><span>
+<span id="line411"></span>
+<span id="line412"></span>		</span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">class</span>="<a class="attribute-value">fork-reveal</a>" <span class="attribute-name">style</span>="<a class="attribute-value">display: none;</a>" <span class="attribute-name">href</span>="<a class="attribute-value" href="view-source:https://github.com/hakimel/reveal.js">https://github.com/hakimel/reveal.js</a>"&gt;</span><span></span><span>&lt;<span class="start-tag">img</span> <span class="attribute-name">style</span>="<a class="attribute-value">position: absolute; top: 0; right: 0; border: 0;</a>" <span class="attribute-name">src</span>="<a class="attribute-value" href="view-source:https://github-camo.global.ssl.fastly.net/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67">https://github-camo.global.ssl.fastly.net/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67</a>" <span class="attribute-name">alt</span>="<a class="attribute-value">Fork reveal.js on GitHub</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line413"></span>
+<span id="line414"></span>		</span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>="<a class="attribute-value">share-reveal</a>" <span class="attribute-name">style</span>="<a class="attribute-value">display: none; position: absolute; bottom: 16px; left: 50%; margin-left: -139px; z-index: 20;</a>"&gt;</span><span>
+<span id="line415"></span>			</span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">class</span>="<a class="attribute-value">share-reveal-editor</a>" <span class="attribute-name">href</span>="<a class="attribute-value" href="view-source:https://slides.com/">https://slides.com</a>"&gt;</span><span>Try the online editor</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line416"></span>
+<span id="line417"></span>			</span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">class</span>="<a class="attribute-value">share-reveal-facebook</a>" <span class="attribute-name">href</span>="<a class="attribute-value" href="view-source:http://www.facebook.com/sharer.php?u=http%3A%2F%2Frevealjs.com">http://www.facebook.com/sharer.php?u=http%3A%2F%2Frevealjs.com</a>"&gt;</span><span>
+<span id="line418"></span>				</span><span>&lt;<span class="start-tag">svg</span> <span class="attribute-name">viewBox</span>="<a class="attribute-value">-8 -8 48 48</a>" <span class="attribute-name">width</span>="<a class="attribute-value">20</a>" <span class="attribute-name">height</span>="<a class="attribute-value">20</a>" <span class="attribute-name">version</span>="<a class="attribute-value">1.1</a>" <span class="attribute-name">xmlns</span>="<a class="attribute-value">http://www.w3.org/2000/svg</a>"&gt;</span><span>
+<span id="line419"></span>					</span><span>&lt;<span class="start-tag">path</span> <span class="attribute-name">fill</span>="<a class="attribute-value">#FFFFFF</a>" <span class="attribute-name">d</span>="<a class="attribute-value">M25.613-4.557c0,0-3.707,0-6.166,0c-3.662,0-7.732,1.535-7.732,6.835c0.019,1.845,0,3.613,0,5.603H7.481
+ 
+v6.728h4.366v19.37h8.021V14.48h5.295l0.479-6.618h-5.913c0,0,0.016-2.946,0-3.8c0-2.093,2.184-1.974,2.312-1.974
+ c1.042,0,3.059,0.003,3.578,0v-6.646H25.613z</a>"<span>/</span>&gt;</span><span>
+<span id="line420"></span>				</span><span>&lt;/<span class="end-tag">svg</span>&gt;</span><span>
+<span id="line421"></span>			</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line422"></span>
+<span id="line423"></span>			</span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">class</span>="<a class="attribute-value">share-reveal-twitter</a>" <span class="attribute-name">href</span>="<a class="attribute-value" href="view-source:http://twitter.com/share?url=http%3A%2F%2Frevealjs.com&amp;text=reveal.js%20-%20The%20HTML%20presentation%20framework&amp;via=revealjs&amp;related=revealjs">http://twitter.com/share?url=http%3A%2F%2Frevealjs.com<span><span class="error" title="“&amp;” did not start a character reference. (“&amp;” probably should have been escaped as “&amp;amp;”.)">&amp;</span>te</span>xt=reveal.js%20-%20The%20HTML%20presentation%20framework<span><span class="error" title="“&amp;” did not start a character reference. (“&amp;” probably should have been escaped as “&amp;amp;”.)">&amp;</span>v</span>ia=revealjs<span><span class="error" title="“&amp;” did not start a character reference. (“&amp;” probably should have been escaped as “&amp;amp;”.)">&amp;</span>re</span>lated=revealjs</a>"&gt;</span><span>
+<span id="line424"></span>				</span><span>&lt;<span class="start-tag">svg</span> <span class="attribute-name">viewbox</span>="<a class="attribute-value">0 0 2000 1625.36</a>" <span class="attribute-name">width</span>="<a class="attribute-value">20</a>" <span class="attribute-name">height</span>="<a class="attribute-value">20</a>" <span class="attribute-name">version</span>="<a class="attribute-value">1.1</a>" <span class="attribute-name">xmlns</span>="<a class="attribute-value">http://www.w3.org/2000/svg</a>"&gt;</span><span>
+<span id="line425"></span>					</span><span>&lt;<span class="start-tag">path</span> <span class="attribute-name">d</span>="<a class="attribute-value">m
+ 1999.9999,192.4 c -73.58,32.64 -152.67,54.69 -235.66,64.61 84.7,-50.78 
+149.77,-131.19 180.41,-227.01 -79.29,47.03 -167.1,81.17 -260.57,99.57 C 
+1609.3399,49.82 1502.6999,0 1384.6799,0 c -226.6,0 -410.328,183.71 
+-410.328,410.31 0,32.16 3.628,63.48 10.625,93.51 -341.016,-17.11 
+-643.368,-180.47 -845.739,-428.72 -35.324,60.6 -55.5583,131.09 
+-55.5583,206.29 0,142.36 72.4373,267.95 182.5433,341.53 -67.262,-2.13 
+-130.535,-20.59 -185.8519,-51.32 -0.039,1.71 -0.039,3.42 -0.039,5.16 
+0,198.803 141.441,364.635 329.145,402.342 -34.426,9.375 -70.676,14.395 
+-108.098,14.395 -26.441,0 -52.145,-2.578 -77.203,-7.364 52.215,163.008 
+203.75,281.649 383.304,284.946 -140.429,110.062 -317.351,175.66 
+-509.5972,175.66 -33.1211,0 -65.7851,-1.949 -97.8828,-5.738 
+181.586,116.4176 397.27,184.359 628.988,184.359 754.732,0 
+1167.462,-625.238 1167.462,-1167.47 0,-17.79 -0.41,-35.48 -1.2,-53.08 
+80.1799,-57.86 149.7399,-130.12 204.7499,-212.41</a>" <span class="attribute-name">style</span>="<a class="attribute-value">fill:#ffffff</a>"<span>/</span>&gt;</span><span>
+<span id="line426"></span>				</span><span>&lt;/<span class="end-tag">svg</span>&gt;</span><span>
+<span id="line427"></span>			</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line428"></span>		</span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line429"></span>
+<span id="line430"></span>		</span><span>&lt;<span class="start-tag">style</span>&gt;</span><span>
+<span id="line431"></span>			/* Social sharing */
+<span id="line432"></span>			.share-reveal a {
+<span id="line433"></span>				display: inline-block;
+<span id="line434"></span>				height: 34px;
+<span id="line435"></span>				line-height: 32px;
+<span id="line436"></span>				padding: 0 10px;
+<span id="line437"></span>				color: #fff;
+<span id="line438"></span>				font-family: Helvetica, sans-serif;
+<span id="line439"></span>				text-decoration: none;
+<span id="line440"></span>				font-weight: bold;
+<span id="line441"></span>				font-size: 12px;
+<span id="line442"></span>				vertical-align: top;
+<span id="line443"></span>				text-transform: uppercase;
+<span id="line444"></span>				box-sizing: border-box;
+<span id="line445"></span>			}
+<span id="line446"></span>
+<span id="line447"></span>			.share-reveal .share-reveal-editor {
+<span id="line448"></span>				line-height: 30px;
+<span id="line449"></span>			}
+<span id="line450"></span>
+<span id="line451"></span>			.share-reveal svg {
+<span id="line452"></span>				vertical-align: middle;
+<span id="line453"></span>			}
+<span id="line454"></span>
+<span id="line455"></span>			.share-reveal a + a {
+<span id="line456"></span>				margin-left: 10px;
+<span id="line457"></span>			}
+<span id="line458"></span>
+<span id="line459"></span>			.share-reveal-editor {
+<span id="line460"></span>				border: 2px solid #fff;
+<span id="line461"></span>			}
+<span id="line462"></span>
+<span id="line463"></span>			.share-reveal-twitter,
+<span id="line464"></span>			.share-reveal-follow {
+<span id="line465"></span>				background-color: #00aced;
+<span id="line466"></span>			}
+<span id="line467"></span>
+<span id="line468"></span>			.share-reveal-facebook {
+<span id="line469"></span>				background-color: #4B71B8;
+<span id="line470"></span>			}
+<span id="line471"></span>
+<span id="line472"></span>			/* Advertising */
+<span id="line473"></span>			#carbonads {
+<span id="line474"></span>				width: 370px;
+<span id="line475"></span>				min-height: 100px;
+<span id="line476"></span>				font-size: 18px;
+<span id="line477"></span>				border: 1px solid rgba(255, 255, 255, 0.2);
+<span id="line478"></span>				padding: 10px;
+<span id="line479"></span>				margin: 40px auto 0 auto;
+<span id="line480"></span>				font-size: 16px;
+<span id="line481"></span>				z-index: 10;
+<span id="line482"></span>				text-align: left;
+<span id="line483"></span>			}
+<span id="line484"></span>
+<span id="line485"></span>			#carbonads .carbon-img img {
+<span id="line486"></span>				float: left;
+<span id="line487"></span>				margin: 0 10px 0 0;
+<span id="line488"></span>				border: 0;
+<span id="line489"></span>				box-shadow: none;
+<span id="line490"></span>			}
+<span id="line491"></span>
+<span id="line492"></span>			#carbonads .carbon-poweredby {
+<span id="line493"></span>				display: block;
+<span id="line494"></span>				margin-top: 10px;
+<span id="line495"></span>				color: #aaa;
+<span id="line496"></span>			}
+<span id="line497"></span>		</span><span>&lt;/<span class="end-tag">style</span>&gt;</span><span>
+<span id="line498"></span>
+<span id="line499"></span>		</span><span>&lt;<span class="start-tag">script</span>&gt;</span><span>
+<span id="line500"></span>		var _gaq = [['_setAccount', 'UA-15240703-1'], ['_trackPageview']];
+<span id="line501"></span>		(function(d, t) {
+<span id="line502"></span>		var g = d.createElement(t),
+<span id="line503"></span>			s = d.getElementsByTagName(t)[0];
+<span id="line504"></span>		g.async = true;
+<span id="line505"></span>		g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+<span id="line506"></span>		s.parentNode.insertBefore(g, s);
+<span id="line507"></span>		})(document, 'script');
+<span id="line508"></span>		</span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>
+<span id="line509"></span>
+<span id="line510"></span>		</span><span>&lt;<span class="start-tag">script</span>&gt;</span><span>
+<span id="line511"></span>			[].slice.call( document.querySelectorAll( '.share-reveal-facebook, .share-reveal-twitter' ) ).forEach( function( element ) {
+<span id="line512"></span>				element.addEventListener( 'click', function( event ) {
+<span id="line513"></span>					event.preventDefault();
+<span id="line514"></span>					var width = 500, height = 300;
+<span id="line515"></span>					var winTop = window.screenY + (window.screen.height / 2) - (height / 2);
+<span id="line516"></span>					var winLeft = window.screenX + (window.screen.width / 2) - (width / 2);
+<span id="line517"></span>					window.open(this.href, 'shre', 'top=' + 
+winTop + ',left=' + winLeft + ',toolbar=0,status=0,width=' + width + 
+',height=' + height);
+<span id="line518"></span>				} );
+<span id="line519"></span>			} );
+<span id="line520"></span>
+<span id="line521"></span>			if( !navigator.userAgent.match( /(iphone|android)/gi ) &amp;&amp; !!document.querySelector ) {
+<span id="line522"></span>				document.querySelector( '.share-reveal' ).style.display = 'block';
+<span id="line523"></span>				document.querySelector( '.fork-reveal' ).style.display = 'block';
+<span id="line524"></span>			}
+<span id="line525"></span>		</span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>
+<span id="line526"></span>
+<span id="line527"></span>	</span><span>&lt;/<span class="end-tag">body</span>&gt;</span><span>
+<span id="line528"></span></span><span>&lt;/<span class="end-tag">html</span>&gt;</span><span>
+<span id="line529"></span></span></pre><menu type="context" id="actions"><menuitem id="goToLine" label="Go to Line…" accesskey="L"></menuitem><menuitem id="wrapLongLines" label="Wrap Long Lines" type="checkbox"></menuitem><menuitem id="highlightSyntax" label="Syntax Highlighting" type="checkbox" checked="true"></menuitem></menu></body></html>
